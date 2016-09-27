@@ -29,6 +29,10 @@ describe DockingStation do
   end
 =end
 
+  it "has a default capacity" do
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  end
+
   describe '#release_bike' do
     it 'releases a bike' do
       bike = Bike.new
