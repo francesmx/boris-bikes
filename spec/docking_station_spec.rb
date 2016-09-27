@@ -11,6 +11,8 @@ describe DockingStation do
   end
 
   it "can dock a bike" do
-    expect(subject).to respond_to :dock.with(1).argument
+    expect(subject).to respond_to(:dock).with(1).argument
   end
+
+  it { is_expected.to respond_to(:bike) }
 end
