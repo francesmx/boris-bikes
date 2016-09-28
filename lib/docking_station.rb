@@ -7,11 +7,12 @@ class DockingStation
 
   def initialize(capacity=DEFAULT_CAPACITY)
     @bikes = []
+    @broken_bikes=[]
     @capacity = capacity
   end
 
   def release_bike
-    fail 'No bikes available' if empty?
+    bike_available?
     bikes.pop
   end
 
@@ -29,5 +30,11 @@ class DockingStation
 
   def empty?
     bikes.empty?
+  end
+
+  def bike_available?
+    fail 'Bike is broken' if bike.broken? == true
+    fail 'No bikes available' if empty?
+    true
   end
 end

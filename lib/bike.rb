@@ -1,6 +1,17 @@
 require_relative 'docking_station'
 
 class Bike
+  def report_broken
+      @broken = true
+    end
+
+    def broken?
+      @broken
+    end
+
+
+
+=begin
   attr_accessor :working
 
   def initialize
@@ -11,4 +22,5 @@ class Bike
     self.working = false
     docking_station.dock(self)
   end
+=end
 end
