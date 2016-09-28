@@ -1,11 +1,13 @@
 require_relative 'docking_station'
 
 class Bike
+
   def report_broken
       @broken = true
     end
 
     def broken?
+      put "@broken is currently equal to: #{@broken}"
       @broken
     end
 
