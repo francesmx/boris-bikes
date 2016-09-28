@@ -7,7 +7,6 @@ class Bike
     end
 
     def broken?
-      put "@broken is currently equal to: #{@broken}"
       @broken
     end
 
