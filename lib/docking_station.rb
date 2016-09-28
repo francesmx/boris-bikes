@@ -1,7 +1,5 @@
 require_relative 'bike'
 
-
-
 class DockingStation
   #attr_reader :bikes
   attr_reader :capacity
