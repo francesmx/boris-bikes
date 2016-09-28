@@ -2,16 +2,17 @@ require_relative 'docking_station'
 
 class Bike
 
+  def initialize
+    @broken = false
+  end
+
   def report_broken
-      @broken = true
-    end
+    @broken = true
+  end
 
-    def broken?
-      put "@broken is currently equal to: #{@broken}"
-      @broken
-    end
-
-
+  def broken?
+    @broken
+  end
 
 =begin
   attr_accessor :working
