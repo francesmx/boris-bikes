@@ -7,6 +7,7 @@ class DockingStation
 
   def initialize(capacity=DEFAULT_CAPACITY)
     @bikes = []
+    @broken_bikes = []
     @capacity = capacity
   end
 
@@ -18,7 +19,11 @@ class DockingStation
 
   def dock bike
     fail 'Docking station full' if full?
-    bikes << bike
+    if bike.broken? == true
+      @broken_bikes << bike
+    else
+      @bikes << bike
+    end
   end
 
   private
