@@ -14,7 +14,7 @@ describe Bike do
     let(:bike) {Bike.new}
     it 'docks bike when reported as broken' do
       docking_station = DockingStation.new
-      docking_station.capacity.times{bike.report_broken}
+      docking_station.capacity.times{bike.report_broken(docking_station)}
       expect {docking_station.dock(Bike.new)}.to raise_error "Docking station full"
     end
   end
